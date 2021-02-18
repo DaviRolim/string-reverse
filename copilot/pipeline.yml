@@ -15,7 +15,7 @@ source:
   # has the following properties: repository, branch.
   properties:
     access_token_secret: github-token-std-string-reverse
-    branch: master
+    branch: main
     repository: https://github.com/DaviRolim/string-reverse
 
 # The deployment section defines the order the pipeline will deploy
@@ -23,7 +23,7 @@ source:
 stages:
     - # The name of the environment to deploy to.
       name: test
-      # Optional: flag for manual approval action before deployment..
+      # Optional: flag for manual approval action before deployment.
       # requires_approval: true
       # Optional: use test commands to validate this stage of your build.
       # test_commands: [echo 'running tests', make test]
