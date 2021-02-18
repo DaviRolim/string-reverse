@@ -14,9 +14,9 @@ source:
   # the artifacts should be sourced from. For example, the GitHub provider
   # has the following properties: repository, branch.
   properties:
-    access_token_secret: github-token-std-string-reverse
+    access_token_secret: 32e7a953beca5dc44ac27b674ee6e964291503ee
     branch: master
-    repository: https://github.com/nathanpeck/string-reverse
+    repository: https://github.com/DaviRolim/string-reverse
 
 # The deployment section defines the order the pipeline will deploy
 # to your environments.
@@ -29,4 +29,4 @@ stages:
         - APP_URL=https://reverse.test.std.string.services npm test --prefix test
 
     - # The name of the environment to deploy to.
-      name: prod
+      # name: prod
