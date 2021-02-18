@@ -1,7 +1,7 @@
 # This YAML file defines the relationship and deployment ordering of your environments.
 
 # The name of the pipeline
-name: pipeline-std-nathanpeck-string-reverse
+name: pipeline-std-DaviRolim-string-reverse
 
 # The version of the schema used in this template
 version: 1
@@ -14,7 +14,7 @@ source:
   # the artifacts should be sourced from. For example, the GitHub provider
   # has the following properties: repository, branch.
   properties:
-    access_token_secret: 32e7a953beca5dc44ac27b674ee6e964291503ee
+    access_token_secret: github-token-std-string-reverse
     branch: master
     repository: https://github.com/DaviRolim/string-reverse
 
@@ -23,10 +23,11 @@ source:
 stages:
     - # The name of the environment to deploy to.
       name: test
+      # Optional: flag for manual approval action before deployment.
+      # requires_approval: true
       # Optional: use test commands to validate this stage of your build.
+      # test_commands: [echo 'running tests', make test]
       test_commands:
         - npm install --prefix test
         - APP_URL=https://reverse.test.std.string.services npm test --prefix test
 
-    - # The name of the environment to deploy to.
-      # name: prod
